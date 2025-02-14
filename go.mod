@@ -1,6 +1,6 @@
 module github.com/stonik02/sso_proto
 
-go 1.23.4
+go 1.23.2
 
 require (
 	google.golang.org/grpc v1.70.0
