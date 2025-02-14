@@ -4,7 +4,7 @@
 // - protoc             v5.29.3
 // source: sso/sso.proto
 
-package cloud_storage_sso_v1
+package cloud_storage_sso_ssov1
 
 import (
 	context "context"
