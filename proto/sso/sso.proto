@@ -1,0 +1,40 @@
+syntax = "proto3";
+
+package auth;
+
+option go_package = "cloud_storage.sso.v1";
+
+service Auth {
+  rpc Register(RegisterRequest) returns (RegisterResponse);
+  rpc Login(LoginRequest) returns (LoginResponse);
+  rpc IsAdmin(IsAdminRequest) returns (IsAdminResponse);
+}
+
+message RegisterRequest {
+    string email = 1;
+    string password = 2;
+    string re_password = 3;
+}
+
+message RegisterResponse {
+  string user_uuid = 1;
+}
+
+message LoginRequest {
+  string email = 1;
+  string password = 2;
+  int32  app_id = 3; // Можно и без этого
+}
+
+message LoginResponse {
+  string access_token = 1;
+  string refresh_token = 2;
+}
+
+message IsAdminRequest {
+  string user_uuid = 1;
+}
+
+message IsAdminResponse {
+  bool is_admin = 1;
+}
