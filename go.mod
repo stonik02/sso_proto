@@ -1,1 +1,1 @@
-module proto
+module github.com/stonik02/sso_proto
